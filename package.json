@@ -8,14 +8,29 @@
     "@testing-library/user-event": "^12.8.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "redux": "^4.1.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "redux": "npm install --save redux",
+    "reduxR": "npm install --save react-redux",
+    "thunk": "npm install --save redux-thunk",
+    "devT": "npm install --save redux-devtools-extension",
+    "allRedux": "npm run redux && npm run reduxR && npm run thunk && npm run devT",
+    "icons": "npm install react-icons --save",
+    "sass": "npm install --save-dev sass",
+    "libs": "npm run icons && npm run sass",
+    "allDep": "npm run allRedux && npm run libs"
   },
   "eslintConfig": {
     "extends": [
@@ -34,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "sass": "^1.35.1"
   }
 }
