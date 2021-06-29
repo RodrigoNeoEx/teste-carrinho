@@ -1,5 +1,6 @@
-import React from 'react'
-import { FaSearch } from "react-icons/fa"
+import React from 'react';
+import { FaSearch } from "react-icons/fa";
+import '../style/components/Searcher/searcher.css';
 
 const Searcher = () => {
   return (
