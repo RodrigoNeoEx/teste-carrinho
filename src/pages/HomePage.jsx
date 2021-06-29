@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../components/Header';
-// import Searcher from '../components/Searcher';
+import Searcher from '../components/Searcher';
 // import Cart from '../components/Cart';
 // import Carrousel from '../components/Corrousel';
 // import Banner from '../components/Banner';
@@ -10,13 +10,10 @@ import Header from '../components/Header';
 
 const HomePage = () => {
   return(
-    <content>
+    <div>
       <Header />
-      {/* <section>
-        <Searcher />
-        <Cart />
-      </section>
-      <main>
+      <Searcher />
+      {/* <main>
         <section>
           <Carrousel />
           <Banner />
@@ -24,7 +21,7 @@ const HomePage = () => {
         <CardConteiner />
       </main>
       <Footer /> */}
-    </content>
+    </div>
   )
 }
 
