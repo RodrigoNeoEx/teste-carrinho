@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+$fontFamily: 'Poppins', sans-serif;
+$colorBy: #3a87e6;
+$colorCode: #0b3148;
+
+.header {
+  background-color: aliceblue;
+  display: flex;
+  height: 10vh;
+  width: 100vw;
+  .header--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .header--img {
+      width: 35vw;
+    }
+    .header--title {
+      font-size: 1rem;
+      font-family: $fontFamily;
+      margin: 0 auto;
+      line-height: 0vh;
+      color: $colorCode;
+    }
+  }
+  .header--nav {
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: $fontFamily;
+    font-size: 0.8rem;
+    font-weight: 700;
+    .header--link {
+      text-decoration: none;
+      color: $colorCode;
+    }
+    .header--link :is(svg) {
+      font-size: 1.5rem;
+    }
+    .header--link :is(span){
+      font-size: 1rem;
+      position: absolute;
+      color: $colorBy;
+    }
+  }
+};
+
+@media (min-width: 600px) {
+  .header {
+    height: 20vh;
+    .header--container {
+      .header--img {
+        width: 30vw;
+      }
+    }
+    .header--nav {
+      font-size: 1.5rem;
+      .header--link :is(svg) {
+        font-size: 2.5rem;
+      }
+    }
+  }
+};
