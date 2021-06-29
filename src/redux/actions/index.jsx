@@ -1,4 +1,4 @@
-import { setOnCart } from './cart';
+import { setOnCart, updateCartCounter } from './cart';
 import { requestProductsBellowTen, requestProductsAboveTen } from './products';
 import {
   fetchFakeBellowAPI,
@@ -7,6 +7,7 @@ import {
 
 export {
   setOnCart,
+  updateCartCounter,
   requestProductsBellowTen,
   requestProductsAboveTen,
 };
