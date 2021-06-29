@@ -1,8 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import Searcher from '../components/Searcher';
-// import Cart from '../components/Cart';
-// import Carrousel from '../components/Corrousel';
+import Carrousel from '../components/Corrousel';
 // import Banner from '../components/Banner';
 // import CardConteiner from '../components/CardConteiner';
 // import Footer from '../components/Footer';
@@ -13,14 +12,14 @@ const HomePage = () => {
     <div>
       <Header />
       <Searcher />
-      {/* <main>
+      <main>
         <section>
           <Carrousel />
-          <Banner />
+          {/* <Banner /> */}
         </section>
-        <CardConteiner />
+        {/* <CardConteiner /> */}
       </main>
-      <Footer /> */}
+      {/* <Footer /> */}
     </div>
   )
 }
