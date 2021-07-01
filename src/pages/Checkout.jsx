@@ -8,7 +8,6 @@ import '../style/variables/var.css';
 import '../style/components/CardsContainer/cardsContainer.css';
 
 const Checkout = () => {
-let total = 0
 const cart = useSelector(state => state.cart.cart);
 const [, updateState] = useState()
 const forceUpdate = useCallback(() => updateState({}), [])
@@ -53,17 +52,17 @@ const handle = () => {
     <>
     <Header />
     <hr/>
-    <section>
-      { createCheckoutCards() }
-    </section>
+      <section>
+        { createCheckoutCards() }
+      </section>
     <hr/>
-    <section>
-      <p>Total</p>
-      <p> {`R$ ${getTotal()}`} </p>
-    </section>
-    { getTotal() > 10 && <span>Parabéns, sua compra tem frete grátis</span>}
+      <section>
+        <p>Total</p>
+        <p> {`R$ ${getTotal()}`} </p>
+      </section>
+      { getTotal() > 10 && <span>Parabéns, sua compra tem frete grátis</span>}
     <hr/>
-    <button type="button">Finalizar Compra</button>
+      <button type="button">Finalizar Compra</button>
     </>
   )
 }
