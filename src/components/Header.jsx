@@ -9,18 +9,13 @@ const Header = () => {
 const location = useLocation().pathname
 
 const headerTitle = () => {
-  switch (location) {
-    case 'register':
-      return 'Cadastre-se';
-    case 'checkout':
-      return 'Finalizar Compras';
-    case 'cart':
-      return 'Carrinho';
-    case 'details':
-      return 'Detalhes do Produto';
-    default:
-      return 'Teste Carrinho';
-  }
+  if (location.includes('checkout')) {
+    return 'Meu Carrinho'; }
+  if (location.includes('register')) {
+    return 'Cadastre-se'; }
+  if (location.includes('Detalhes do Produto')) {
+    return 'Meu Carrinho' }
+  return 'Teste Carrinho';
 };
 
   const updateCounter = () => {
@@ -34,15 +29,24 @@ const headerTitle = () => {
         <img className="header--img" src={logo} alt="Logo CodeBy"/>
         <h1 className="header--title">{ headerTitle() }</h1>
       </div>
-      <nav className="header--nav">
-        <Link className="header--link" href="/">Home</Link>
-        <Link className="header--link" href="/register">Cadastro</Link>
-        <Link className="header--link" href="/checkout">Checkout</Link>
-        <Link className="header--link cart" href="/cart">
-          <RiShoppingCartLine />
-          <span>{ updateCounter() }</span>
-        </Link>
-      </nav>
+        { !location.includes('checkout')
+          ? (
+            <nav className="header--nav">
+              <Link className="header--link" href="/">Home</Link>
+              <Link className="header--link" href="/register">Cadastro</Link>
+              <Link className="header--link" to="/checkout">Checkout</Link>
+              <Link className="header--link cart" to="/checkout">
+                <RiShoppingCartLine />
+                <span>{ updateCounter() }</span>
+              </Link>
+            </nav>
+          )
+          : (
+            <nav className="header--nav">
+              <Link className="header--link" to="/">Voltar</Link>
+            </nav>
+          )
+        }
     </header>
   )
 }
