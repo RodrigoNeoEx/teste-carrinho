@@ -1,13 +1,11 @@
-const fakeTimer = 900;
-
 export async function fetchFakeBellowAPI() {
-  const response = setTimeout(() => {fetch("../data/abaixo-10-reais.json")}, fakeTimer);
-  const productsBellowTen = await response.json();
-  return productsBellowTen;
+  const response = await fetch("http://localhost:3001/items");
+  const productsBellow = await response.json();
+  return productsBellow;
 };
 
 export async function fetchFakeAboveAPI() {
-  const response = setTimeout(() => {fetch("../data/acima-10-reais.json")}, fakeTimer);
-  const productsAboveTen = await response.json();
-  return productsAboveTen;
+  const response = await fetch("http://localhost:3002/items");
+  const productsAbove = await response.json();
+  return productsAbove;
 };

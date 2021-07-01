@@ -20,7 +20,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm run allServers & react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -32,7 +32,10 @@
     "icons": "npm install react-icons --save",
     "sass": "npm install --save-dev sass",
     "libs": "npm run icons && npm run sass",
-    "allDep": "npm run allRedux && npm run libs"
+    "allDep": "npm run allRedux && npm run libs",
+    "server1": "json-server --watch abaixo-10-reais.json --port 3001",
+    "server2": "json-server --watch acima-10-reais.json --port 3002",
+    "allServers": "npm run server1 & npm run server2"
   },
   "eslintConfig": {
     "extends": [
@@ -53,6 +56,8 @@
     ]
   },
   "devDependencies": {
+    "json-server": "^0.16.3",
+    "nodemon": "^2.0.9",
     "sass": "^1.35.1"
   }
 }

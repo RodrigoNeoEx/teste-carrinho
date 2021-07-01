@@ -1,9 +1,10 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Header from '../components/Header';
 import Searcher from '../components/Searcher';
 import Carrousel from '../components/Corrousel';
 // import Banner from '../components/Banner';
-// import CardConteiner from '../components/CardConteiner';
+import CardConteiner from '../components/CardConteiner';
 // import Footer from '../components/Footer';
 
 
@@ -17,11 +18,11 @@ const HomePage = () => {
           <Carrousel />
           {/* <Banner /> */}
         </section>
-        {/* <CardConteiner /> */}
+        <CardConteiner />
       </main>
       {/* <Footer /> */}
     </div>
   )
 }
 
-export default HomePage;
+export default connect()(HomePage);

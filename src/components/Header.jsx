@@ -30,10 +30,10 @@ const headerTitle = () => {
 
   return (
     <header className="header">
-      <container className="header--container">
+      <div className="header--container">
         <img className="header--img" src={logo} alt="Logo CodeBy"/>
         <h1 className="header--title">{ headerTitle() }</h1>
-      </container>
+      </div>
       <nav className="header--nav">
         <Link className="header--link" href="/">Home</Link>
         <Link className="header--link" href="/register">Cadastro</Link>

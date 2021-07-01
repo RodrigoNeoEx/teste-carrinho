@@ -1,5 +1,5 @@
 import { setOnCart, updateCartCounter } from './cart';
-import { requestProductsBellowTen, requestProductsAboveTen } from './products';
+import { requestAllProducts, productsBellow, productsAbove } from './products';
 import {
   fetchFakeBellowAPI,
   fetchFakeAboveAPI,
@@ -8,15 +8,18 @@ import {
 export {
   setOnCart,
   updateCartCounter,
-  requestProductsBellowTen,
-  requestProductsAboveTen,
+  requestAllProducts,
+  productsBellow,
+  productsAbove,
 };
 
 export const requestFakeBellowAPI = () => async (dispatch) => {
+  console.log('foi?')
   dispatch(fetchFakeBellowAPI());
   try {
     const response = await fetchFakeBellowAPI();
-    return dispatch(requestProductsBellowTen(response));
+    console.log(response)
+    return dispatch(requestAllProducts(response));
   } catch (error) {
     return console.log(error);
   }
@@ -26,7 +29,7 @@ export const requestFakeAboveAPI = () => async (dispatch) => {
   dispatch(fetchFakeAboveAPI());
   try {
     const response = await fetchFakeAboveAPI();
-    return dispatch(requestProductsAboveTen(response));
+    return dispatch(requestAllProducts(response));
   } catch (error) {
     return console.log(error);
   }

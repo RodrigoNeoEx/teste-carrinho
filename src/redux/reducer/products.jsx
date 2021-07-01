@@ -1,18 +1,22 @@
-import { REQUEST_PRODUCTS_BELLOW_TEN, REQUEST_PRODUCTS_ABOVE_TEN } from '../actions/products';
+import { REQUEST_ALL_PRODUCTS, PRODUCTS_BELLOW, PRODUCTS_ABOVE } from '../actions/products';
 
 const INITIAL_STATE = {
-  productsBellowTen: [],
-  productsAboveTen: [],
+  productsBellow:'',
+  productsAbove: '',
+  allProducts: [],
 }
 
 const products = ( state = INITIAL_STATE, action) => {
   switch (action.type) {
-  case REQUEST_PRODUCTS_BELLOW_TEN:
+  case PRODUCTS_BELLOW:
     return ({ ...state,
-      productsBellowTen:  action.productsBellowTen });
-    case REQUEST_PRODUCTS_ABOVE_TEN:
-      return ({ ...state,
-        productsAboveTen:  action.productsAboveTen });
+      productsBellow: action.productsBellow });
+  case PRODUCTS_ABOVE:
+    return ({ ...state,
+      productsAbove: action.productsAbove });
+  case REQUEST_ALL_PRODUCTS:
+    return ({ ...state,
+      allProducts: [state.productsAbove, state.productsBellow] });
     default:
       return state
   }

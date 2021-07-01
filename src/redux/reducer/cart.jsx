@@ -2,7 +2,7 @@ import { SET_ON_CART, UPDATE_CART_COUNTER } from '../actions/cart';
 
 const INITIAL_STATE = {
   cart: [],
-  COUNTER: '',
+  counter: '',
 }
 
 const cart = ( state = INITIAL_STATE, action) => {

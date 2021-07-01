@@ -5,7 +5,6 @@ import '../style/components/corrousel/corrousel.css'
 
 
 export default function Corrousel() {
-
   return (
     <div className="carousel--container">
       <Carousel>
