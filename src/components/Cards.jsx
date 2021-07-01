@@ -3,7 +3,6 @@ import {fetchFakeBellowAPI, fetchFakeAboveAPI} from '../services/requestAPI/fake
 import { useSelector, useDispatch } from 'react-redux';
 import Card from 'react-bootstrap/Card';
 import '../style/components/Cards/cards.css';
-import '../style/variables/var.css';
 
 const Cards = () => {
 

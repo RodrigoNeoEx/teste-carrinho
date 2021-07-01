@@ -3,7 +3,6 @@ import Carousel from 'react-bootstrap/Carousel';
 import logo from '../style/images/logo.png'
 import '../style/components/corrousel/corrousel.css'
 
-
 export default function Corrousel() {
   return (
     <div className="carousel--container">
