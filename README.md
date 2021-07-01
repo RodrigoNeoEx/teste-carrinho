@@ -4,7 +4,7 @@ Teste técnico proposto pela empresa CodeBy.
 
 #### Utilizar Script  `npm start` para inicializar localhost: 3000 3001 3002
 
-host da API feito com json-server, sem roda o script a aplicação irá quebrar.
+host da API feito com json-server, sem rodar o script a aplicação irá quebrar.
 
 ### Ferramentas e Frameworks Utilizados
 
@@ -15,3 +15,11 @@ host da API feito com json-server, sem roda o script a aplicação irá quebrar.
 - React Hooks
 - Json-Server
 - Consumo de API
+
+---
+🚧👷 underconstruction 👷🚧
+---
+
+###### Projeto ainda em fase de finalização, faltando adicionar efeitos de hover e novas features.
+###### Darei continuidade após prazo avaliativo.
+
