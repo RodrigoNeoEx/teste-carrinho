@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
-import {fetchFakeBellowAPI, fetchFakeAboveAPI} from '../services/requestAPI/fakeAPI'
+import {fetchFakeBellowAPI, fetchFakeAboveAPI} from '../services/requestAPI/fakeAPI';
 import { useSelector, useDispatch } from 'react-redux';
+import Card from 'react-bootstrap/Card';
+import '../style/components/Cards/cards.css';
+import '../style/variables/var.css';
 
 const Cards = () => {
 const productsBellow = useSelector(state => state.products.productsBellow);
@@ -11,8 +14,8 @@ useEffect(() => {
   async function fetchAPIS() {
     const request1 = await fetchFakeBellowAPI();
     const request2 = await fetchFakeAboveAPI();
-    dispatch({ type: 'PRODUCTS_BELLOW', productsBellow: request1 })
-    dispatch({ type: 'PRODUCTS_ABOVE', productsAbove: request2 })
+    dispatch({ type: 'PRODUCTS_BELLOW', productsBellow: request1 });
+    dispatch({ type: 'PRODUCTS_ABOVE', productsAbove: request2 });
   }
   fetchAPIS();
 }, [dispatch]);
@@ -20,40 +23,42 @@ useEffect(() => {
   const createBellowCards = () => {
   return  productsBellow.map((cardProducts) => {
       return (
-        <div key={cardProducts.id}>
-          <section>
-            <h3>{cardProducts.name}</h3>
-            <h4>{`R$ ${((cardProducts.price)/100).toFixed(2)}`}</h4>
-            <h4>{`R$ ${((cardProducts.sellingPrice)/100).toFixed(2)}`}</h4>
-          </section>
-          <img src={cardProducts.imageUrl} alt="product"/>
-        </div>
-      )
+        <Card key={cardProducts.id}>
+        <Card.Img variant="top" src={cardProducts.imageUrl} alt="product" />
+          <Card.Body>
+            <Card.Title>{cardProducts.name}</Card.Title>
+            <Card.Text style={{ textDecoration: 'line-through' }}>{`De R$ ${((cardProducts.price)/100).toFixed(2)}`}</Card.Text>
+            <Card.Text>{`Por R$ ${((cardProducts.sellingPrice)/100).toFixed(2)}`}</Card.Text>
+            {/* <Button variant="primary">Go somewhere</Button> */}
+          </Card.Body>
+        </Card>
+      );
     });
-  }
+  };
 
   const createAboveCards = () => {
-        return  productsAbove.map((cardProducts) => {
-        return (
-          <div key={cardProducts.id}>
-            <section>
-              <h3>{cardProducts.name}</h3>
-              <h4>{`R$ ${((cardProducts.price)/100).toFixed(2)}`}</h4>
-              <h4>{`R$ ${((cardProducts.sellingPrice)/100).toFixed(2)}`}</h4>
-            </section>
-            <img src={cardProducts.imageUrl} alt="product"/>
-          </div>
-        )
-      });
-    }
+    return  productsAbove.map((cardProducts) => {
+      return (
+        <Card style={{ width: '11rem' }} key={cardProducts.id}>
+        <Card.Img variant="top" src={cardProducts.imageUrl} alt="product" />
+          <Card.Body>
+            <Card.Title>{cardProducts.name}</Card.Title>
+            <Card.Text style={{ textDecoration: 'line-through' }}>{`De R$ ${((cardProducts.price)/100).toFixed(2)}`}</Card.Text>
+            <Card.Text>{`Por R$ ${((cardProducts.sellingPrice)/100).toFixed(2)}`}</Card.Text>
+            {/* <Button variant="primary">Go somewhere</Button> */}
+          </Card.Body>
+        </Card>
+      );
+    });
+  };
 
   const createAllCards = () => {
     if(productsBellow.length > 1 && productsAbove.length > 1) {
       return (
-      <section>
+      <>
         { createBellowCards() }
         { createAboveCards() }
-      </section>
+      </>
       );
     };
   };

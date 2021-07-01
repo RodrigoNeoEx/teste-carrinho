@@ -1,0 +1,13 @@
+.card-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+@media (min-width: 576px) {
+  .card-group {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+  }
+}/*# sourceMappingURL=cardsContainer.css.map */
