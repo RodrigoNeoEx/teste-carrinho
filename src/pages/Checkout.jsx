@@ -27,7 +27,6 @@ const handle = () => {
               <Card.Text id={`teste-${index}`}>{`R$ ${card.price}`}</Card.Text>
             </Card.Body>
             <section>
-              <button type="button" onClick={handle}> teste </button>
               <button type="button" onClick={() => { if(card.count > 0) { card.count = card.count- 1
               handle() }}  }> - </button>
               <span>{`qnt: ${card.count}`}</span>
