@@ -19,7 +19,7 @@ host da API feito com json-server, sem rodar o script a aplicação irá quebrar
 ---
 🚧👷 underconstruction 👷🚧
 ---
-
+###### Aplicação encontra-se responsiva porém feito somente ajustes para mobile first.
 ###### Projeto ainda em fase de finalização, faltando adicionar efeitos de hover e novas features.
 ###### Darei continuidade após prazo avaliativo.
 
