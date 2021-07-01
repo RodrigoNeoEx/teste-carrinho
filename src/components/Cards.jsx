@@ -3,7 +3,6 @@ import {fetchFakeBellowAPI, fetchFakeAboveAPI} from '../services/requestAPI/fake
 import { useSelector, useDispatch } from 'react-redux';
 import Card from 'react-bootstrap/Card';
 import '../style/components/Cards/cards.css';
-import '../style/variables/var.css';
 
 const Cards = () => {
 
@@ -40,9 +39,8 @@ useEffect(() => {
               price: ((cardProducts.sellingPrice)/100).toFixed(2),
               count: 1,
             }
-
-             dispatch({ type: 'SET_ON_CART', cart: products});
-            } }>Adicionar</button>
+            dispatch({ type: 'SET_ON_CART', cart: products});
+          } }>Adicionar</button>
         </Card>
       );
     });
@@ -51,14 +49,23 @@ useEffect(() => {
   const createAboveCards = () => {
     return  productsAbove.map((cardProducts) => {
       return (
-        <Card style={{ width: '11rem' }} key={cardProducts.id}>
+        <Card key={cardProducts.id}>
         <Card.Img variant="top" src={cardProducts.imageUrl} alt="product" />
           <Card.Body>
             <Card.Title>{cardProducts.name}</Card.Title>
             <Card.Text style={{ textDecoration: 'line-through' }}>{`De R$ ${((cardProducts.price)/100).toFixed(2)}`}</Card.Text>
             <Card.Text>{`Por R$ ${((cardProducts.sellingPrice)/100).toFixed(2)}`}</Card.Text>
-            {/* <Button variant="primary">Go somewhere</Button> */}
           </Card.Body>
+          <button type="button" onClick={ () => {
+            let products = {
+              image: cardProducts.imageUrl,
+              product: cardProducts.name,
+              dPrice: ((cardProducts.price)/100).toFixed(2),
+              price: ((cardProducts.sellingPrice)/100).toFixed(2),
+              count: 1,
+            }
+             dispatch({ type: 'SET_ON_CART', cart: products});
+          } }>Adicionar</button>
         </Card>
       );
     });

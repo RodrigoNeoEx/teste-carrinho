@@ -11,10 +11,6 @@ const location = useLocation().pathname
 const headerTitle = () => {
   if (location.includes('checkout')) {
     return 'Meu Carrinho'; }
-  if (location.includes('register')) {
-    return 'Cadastre-se'; }
-  if (location.includes('Detalhes do Produto')) {
-    return 'Meu Carrinho' }
   return 'Teste Carrinho';
 };
 

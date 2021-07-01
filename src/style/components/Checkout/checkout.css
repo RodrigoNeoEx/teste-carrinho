@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+.btn-block {
+  margin: 0 2.5vw !important;
+  margin-bottom: 3vh !important;
+  width: 95vw !important;
+}
+
+.alert {
+  margin: 0 7.5vw !important;
+  width: 85vw !important;
+  border-radius: 2.25rem !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+  font-size: 2vh !important;
+}
+
+.checkout--cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.checkout--cards .checkout--buttons {
+  display: flex;
+  justify-content: space-around;
+}
+.checkout--cards .checkout--buttons .checkout--buttons--btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3vh;
+  background-color: transparent;
+  border: none;
+  font-size: 7vh;
+}
+
+.checkout--total {
+  display: flex;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  justify-content: space-between;
+  margin: 0 4vw;
+  font-size: 3vh;
+}/*# sourceMappingURL=checkout.css.map */
