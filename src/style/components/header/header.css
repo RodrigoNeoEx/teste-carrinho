@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+.header {
+  background-color: aliceblue;
+  display: flex;
+  height: 10vh;
+  width: 100vw;
+}
+.header .header--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header .header--container .header--img {
+  width: 35vw;
+}
+.header .header--container .header--title {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  margin: 0 auto;
+  line-height: 0vh;
+  color: #0b3148;
+}
+.header .header--nav {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.header .header--nav .header--link {
+  text-decoration: none;
+  color: #0b3148;
+}
+.header .header--nav .header--link :is(svg) {
+  font-size: 1.5rem;
+}
+.header .header--nav .header--link :is(span) {
+  font-size: 1rem;
+  position: absolute;
+  color: #3a87e6;
+}
+
+@media (min-width: 600px) {
+  .header {
+    height: 20vh;
+  }
+  .header .header--container .header--img {
+    width: 30vw;
+  }
+  .header .header--nav {
+    font-size: 1.5rem;
+  }
+  .header .header--nav .header--link :is(svg) {
+    font-size: 2.5rem;
+  }
+}/*# sourceMappingURL=header.css.map */

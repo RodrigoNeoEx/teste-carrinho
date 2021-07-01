@@ -1,0 +1,61 @@
+$fontFamily: 'Poppins', sans-serif;
+$boxShadow: 0px 0px 10px 0px #00000087;
+
+.card {
+  font-family: $fontFamily;
+  width: 40vw !important;
+  max-width: 230px;
+  height: 40vh;
+  margin: 10px;
+  box-shadow: $boxShadow;
+  .card-img-top {
+    align-self: center;
+  }
+  .card-body {
+    position: relative;
+    bottom: 9vh;
+    text-align: center;
+    padding: 0;
+    .card-title {
+      font-size: 0.95rem;
+      padding: 0 5px;
+    }
+    .card-text {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 0.85em;
+    }
+  }
+}
+
+@media (min-width: 576px){
+  .card {
+    width: 28vw !important;
+    height: 70vh;
+    max-height: 300px;
+    .card-img-top {
+        width: 80%;
+        align-self: center;
+    }
+    .card-body {
+      position: relative;
+      bottom: 9vh;
+      text-align: center;
+      padding: 0;
+      .card-title {
+        font-size: 0.95rem;
+        padding: 0 5px;
+      }
+      .card-text {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 0.85em;
+      }
+    }
+  }
+}
+
+.card-group>.card+.card {
+  margin-left: 3vh !important;
+  border: 1px solid rgba(0,0,0,.125) !important;
+}
