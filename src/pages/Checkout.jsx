@@ -2,7 +2,6 @@ import React, { useState, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import Header from '../components/Header';
 import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
 import Alert from 'react-bootstrap/Alert';
 import Button from 'react-bootstrap/Button';
 import '../style/components/Cards/cards.css';
